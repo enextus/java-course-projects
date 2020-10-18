@@ -5,14 +5,13 @@ public class ModificationOfStrin {
     /**
      * Given a string, return a version without both the first and last char of the string.
      * The string may be any length, including 0.
-     *
+     * <p>
      * Expectation:
      * withoutEnd2("Hello") → "ell"
      * withoutEnd2("abc") → "b"
      * withoutEnd2("ab") → ""
-     *
+     * <p>
      * Test:
-     *
      */
 
     public static void main(String[] args) {
@@ -22,24 +21,20 @@ public class ModificationOfStrin {
         String str = "ab";
 
         withoutEnd2(str);
-        
+
     }
 
-    private static String[] withoutEnd2(String str) {
+    private static String withoutEnd2(String str) {
+
+        if (str.length() > 1) {
 
 
+        String theBegin = str.substring(0);
 
-        if (str.length() > 1 ) {
 
-            String[] arr = new String[] {"1", "2"};
+            return theBegin;
+        } else
 
-            return arr;
-
-        } else {
-
-            String[] arr = new String[]{""};
-
-            return arr;
-        }
+            return str;
     }
 }
