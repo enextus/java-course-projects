@@ -22,8 +22,11 @@ public class CheckOfContainsAnApperance {
         System.out.println(xyzThere("xyz.abc"));
     }
 
-    private static boolean xyzThere(String abcxyz) {
+    private static boolean xyzThere(String str) {
 
-        return false;
+        int index = str.indexOf(".xyz");
+
+        if (index >= 0) return xyzThere(str.substring(0, index)) || xyzThere(str.substring(index + 4));
+        else return (str.contains("xyz"));
     }
 }
