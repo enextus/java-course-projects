@@ -34,7 +34,6 @@ public class CheckHowTimesAppearChars {
         return false;
     }
 
-
     private static int counterString(String str, String pattern) {
 
         int counter = 0;
