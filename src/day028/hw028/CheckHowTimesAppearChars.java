@@ -11,12 +11,15 @@ public class CheckHowTimesAppearChars {
      * catDog("1cat1cadodog") → true
      * *
      * Test:
+     * true
+     * false
+     * true
      */
 
     public static void main(String[] args) {
 
-        System.out.println(catDog("1catdog"));
-        System.out.println(catDog("1catcat"));
+        System.out.println(catDog("catdog"));
+        System.out.println(catDog("catcat"));
         System.out.println(catDog("1cat1cadodog"));
     }
 
@@ -25,14 +28,7 @@ public class CheckHowTimesAppearChars {
         String catPattern = "cat";
         String dogPattern = "dog";
 
-        int countCat = counterString(str, catPattern);
-        int countDog = counterString(str, dogPattern);
-
-        System.out.println("countCat: " + countCat);
-        System.out.println("countDog: " + countDog);
-        System.out.println();
-
-        return countCat == countDog;
+        return counterString(str, catPattern) == counterString(str, dogPattern);
     }
 
     private static int counterString(String str, String pattern) {
@@ -40,7 +36,7 @@ public class CheckHowTimesAppearChars {
         int counter = 0;
         int index = str.indexOf(pattern, 0);
 
-        while (index > 0) {
+        while (index >= 0) {
 
             index = str.indexOf(pattern, index + 1);
             ++counter;
