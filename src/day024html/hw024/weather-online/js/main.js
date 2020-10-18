@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 
-const token = '.env';
+const token = 'in another file';
 
 // penguin start
 // const elemIsVisible = document.querySelector(".wrapper").offsetHeight;
