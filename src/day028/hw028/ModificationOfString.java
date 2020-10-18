@@ -1,6 +1,6 @@
 package day028.hw028;
 
-public class ModificationOfStrin {
+public class ModificationOfString {
 
     /**
      * Given a string, return a version without both the first and last char of the string.
@@ -30,7 +30,7 @@ public class ModificationOfStrin {
     private static String withoutEnd2(String str) {
 
         String result = "";
-        
+
         if (str.length() > 2) result = str.substring(1, str.length() - 1);
         return result;
     }
