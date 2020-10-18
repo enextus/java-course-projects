@@ -32,7 +32,7 @@ public class CheckHowTimesAppearChars {
         System.out.println("countDog: " + countDog);
         System.out.println();
 
-        return false;
+        return (countCat == countDog) ? true : false;
     }
 
     private static int counterString(String str, String pattern) {
