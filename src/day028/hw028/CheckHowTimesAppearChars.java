@@ -15,8 +15,8 @@ public class CheckHowTimesAppearChars {
 
     public static void main(String[] args) {
 
-        catDog("catdog");
-        catDog("catcat");
+        catDog("1catdog");
+        catDog("1catcat");
         catDog("1cat1cadodog");
     }
 
@@ -28,8 +28,9 @@ public class CheckHowTimesAppearChars {
         int countCat = counterString(str, catPattern);
         int countDog = counterString(str, dogPattern);
 
-        System.out.println(countCat);
-        System.out.println(countDog);
+        System.out.println("countCat: " + countCat);
+        System.out.println("countDog: " + countDog);
+        System.out.println();
 
         return false;
     }
