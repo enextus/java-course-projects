@@ -15,8 +15,8 @@ public class CheckHowTimesAppearChars {
 
     public static void main(String[] args) {
 
-        //catDog("catdog");
-        //catDog("catcat");
+        catDog("catdog");
+        catDog("catcat");
         catDog("1cat1cadodog");
     }
 
@@ -25,24 +25,28 @@ public class CheckHowTimesAppearChars {
         String catPattern = "cat";
         String dogPattern = "dog";
 
-        counterString(String str, String catPattern);
+        int countCat = counterString(str, catPattern);
+        int countDog = counterString(str, dogPattern);
 
+        System.out.println(countCat);
+        System.out.println(countDog);
 
         return false;
     }
 
 
-    private int counterString(String str, String pattern) {
-        int times = 0;
+    private static int counterString(String str, String pattern) {
+
+        int counter = 0;
         int index = str.indexOf(pattern, 0);
 
         while (index > 0) {
 
             index = str.indexOf(pattern, index + 1);
 
-            ++times;
+            ++counter;
         }
 
-        return times;
+        return counter;
     }
 }
