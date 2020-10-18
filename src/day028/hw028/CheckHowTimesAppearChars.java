@@ -23,6 +23,11 @@ public class CheckHowTimesAppearChars {
 
     private static boolean catDog(String str) {
 
+        String catPattern = "cat";
+        String dogPattern = "dog";
+
+        // str.contains(str11)
+
         return false;
     }
 }
