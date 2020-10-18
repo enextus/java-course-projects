@@ -15,9 +15,9 @@ public class CheckHowTimesAppearChars {
 
     public static void main(String[] args) {
 
-        catDog("1catdog");
-        catDog("1catcat");
-        catDog("1cat1cadodog");
+        System.out.println(catDog("1catdog"));
+        System.out.println(catDog("1catcat"));
+        System.out.println(catDog("1cat1cadodog"));
     }
 
     private static boolean catDog(String str) {
@@ -32,7 +32,7 @@ public class CheckHowTimesAppearChars {
         System.out.println("countDog: " + countDog);
         System.out.println();
 
-        return (countCat == countDog) ? true : false;
+        return countCat == countDog;
     }
 
     private static int counterString(String str, String pattern) {
@@ -43,7 +43,6 @@ public class CheckHowTimesAppearChars {
         while (index > 0) {
 
             index = str.indexOf(pattern, index + 1);
-
             ++counter;
         }
 
