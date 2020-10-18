@@ -26,9 +26,6 @@ public class FirstAndLastChars {
 
     private static String nTwice(String str, int n) {
 
-        String theBegin = str.substring(0, n);
-        String theEnd = str.substring(str.length() - n, str.length());
-
-        return theBegin + theEnd;
+        return str.substring(0, n) + str.substring(str.length() - n);
     }
 }
