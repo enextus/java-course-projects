@@ -6,14 +6,17 @@ public class BubbleSortDouble {
 
     /**
      * BubbleSortDouble
-     *
+     * Bubble sorting example
      */
 
     public static void main(String[] args) {
+
         double[] myLovelyDoubleArray = new double[]{3.1, 6.18, 18.0, 1.0, 0.5, 100.0};
+
         System.out.println(Arrays.toString(myLovelyDoubleArray));
 
-        double [] newArray = copyArray(myLovelyDoubleArray);
+        double[] newArray = copyArray(myLovelyDoubleArray);
+
         bubbleSortDouble(newArray);
 
         System.out.println(Arrays.toString(newArray));
@@ -23,20 +26,20 @@ public class BubbleSortDouble {
 
         int count = 0;
 
-        for (int i = 0; i < arrUnsorted.length-1; i++) {
+        for (int i = 0; i < arrUnsorted.length - 1; i++) {
 
-            if(arrUnsorted[i] <= arrUnsorted[i +1]){
+            if (arrUnsorted[i] <= arrUnsorted[i + 1]) {
                 continue;
             }
 
             double temp = arrUnsorted[i];
-            arrUnsorted[i] = arrUnsorted[i+1];
-            arrUnsorted[i+1] = temp;
+            arrUnsorted[i] = arrUnsorted[i + 1];
+            arrUnsorted[i + 1] = temp;
 
             count++;
         }
 
-        if(count > 0){
+        if (count > 0) {
             bubbleSortDouble(arrUnsorted);
         }
     }
