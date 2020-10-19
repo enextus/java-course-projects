@@ -3,6 +3,9 @@ package day028.hw028;
 public class CheckOfContainsAnApperance {
 
     /**
+     * Is null == false in Java?
+     * The answer is: No this expression is not even valid and if it was, it would be false.
+     *
      * Return true if the given string contains an appearance of “xyz”
      * where the xyz is not directly preceeded by a period (.).
      * So “xxyz” counts but “x.xyz” does not.
@@ -28,6 +31,8 @@ public class CheckOfContainsAnApperance {
     private static boolean xyzThere(String str) {
 
         int index = str.indexOf(".xyz");
+
+        System.out.println("index: " + index);
 
         if (index >= 0) return xyzThere(str.substring(0, index)) || xyzThere(str.substring(index + 4));
         else return (str.contains("xyz"));
