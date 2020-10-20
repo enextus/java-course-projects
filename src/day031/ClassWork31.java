@@ -6,20 +6,18 @@ public class ClassWork31 {
     public static void main(String[] args) {
 
         char[] charArr1 = new char[]{'€', 'l', '&', 'c', '?', '<'};
-        String str = "В лесу родилась ёлочка красивая";
 
+        String str = "В лесу родилась ёлочка красивая";
         char[] charArr2 = str.toCharArray();
+
         String cyrillic = " .,абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
 
+        // Test print
+        System.out.println("charArr1: " + Arrays.toString(charArr1));
+        System.out.println("charArr2: " + Arrays.toString(charArr2));
+        System.out.println();
+
         char[] charArr3 = cyrillic.toCharArray();
-
-        // sortOdin(charArr1);
-
-      /*  System.out.println(Arrays.toString(charArr1));
-        sortOdin(charArr2);
-        System.out.println(Arrays.toString(charArr2));
-        sortOdin(charArr3);
-        System.out.println(Arrays.toString(charArr3));*/
 
         sortLex(charArr1);
         System.out.println(Arrays.toString(charArr1));
@@ -53,7 +51,6 @@ public class ClassWork31 {
 
 
     private static void sortOdin(char[] arr) {
-
         int count = 0;
 
         for (int i = 0; i < arr.length - 1; i++) {
