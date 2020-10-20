@@ -2,7 +2,7 @@ package day031;
 
 import java.util.Arrays;
 
-public class ClassWork31 {
+public class RecursiveBubbleSort {
     public static void main(String[] args) {
 
         char[] charArr1 = new char[]{'€', 'l', '&', 'c', '?', '<'};
@@ -48,7 +48,6 @@ public class ClassWork31 {
         if (count > 0) sortOdin(arr);
 
     }
-
 
     private static void sortOdin(char[] arr) {
         int count = 0;
