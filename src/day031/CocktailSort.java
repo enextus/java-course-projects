@@ -1,6 +1,5 @@
-package day31;
+package day031;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class CocktailSort {
