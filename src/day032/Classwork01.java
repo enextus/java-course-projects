@@ -10,24 +10,22 @@ public class Classwork01 {
 
         //
 
-        int smallBars = 0;
-        int bigBars = 0;
-        int goal = 15;
+        int smallBars = 4; int bigBars = 1; int goal = 15;
 
         System.out.println(makeChocolate(smallBars, bigBars, goal));
     }
 
-    public static int makeChocolate(int small, int big, int goal) {
+    public static int makeChocolate(int a, int b, int c) {
 
-        int rem = goal % 5;
+        int rem = c % 5;
 
-        if (small + (big * 5) < goal)
+        if (a + (b * 5) < c)
             return -1;
 
-        else if (rem <= small && goal - big * 5 > 4)
+        else if ((rem <= a)&& (c - b * 5 > 4))
             return rem + 5;
 
-        else if (rem <= small)
+        else if (rem <= a)
             return rem;
         else
             return -1;
