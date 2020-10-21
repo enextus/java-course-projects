@@ -8,30 +8,21 @@ public class Classwork01 {
 
     public static void main(String[] args) {
 
-        //
-
-        int smallBars = 4;
+        int smallBars = 10;
         int bigBars = 1;
         int goal = 15;
 
         System.out.println(makeChocolate(smallBars, bigBars, goal));
     }
 
-    public static int makeChocolate(int a, int b, int c) {
+    public static int makeChocolate(int small, int big, int goal) {
 
-        int rem = c % 5;
+        int a = (goal - (big * 5));
 
-        if (a + (b * 5) < c)
-            return -1;
+        if (a <= small && a >= 0) return a;
 
-        else if ((rem <= a) && (c - b * 5 > 4))
-            return rem + 5;
+        if ((a < 0) && (goal % 5 <= small)) return (goal % 5);
 
-        else if (rem <= a)
-            return rem;
-        else
-            return -1;
+        return -1;
     }
 }
-
-
