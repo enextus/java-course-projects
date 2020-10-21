@@ -3,6 +3,12 @@ package day031;
 import java.util.Arrays;
 
 public class RecursiveBubbleSort {
+
+    /**
+     * recursive bubble sort
+     *
+     */
+
     public static void main(String[] args) {
 
         char[] charArr1 = new char[]{'€', 'l', '&', 'c', '?', '<'};

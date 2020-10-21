@@ -4,40 +4,39 @@ public class Snowflake {
 
     /**
      * Draw snowflake makeSnowflake (10)
-     *
+     * <p>
      * Test:
      * Snowflake:
      * *             *             *
-     *  *            *            *
-     *   *           *           *
-     *    *          *          *
-     *     *         *         *
-     *      *        *        *
-     *       *       *       *
-     *        *      *      *
-     *         *     *     *
-     *          *    *    *
-     *           *   *   *
-     *            *  *  *
-     *             * * *
-     *              ***
-     *               *
-     *               *
-     *              ***
-     *             * * *
-     *            *  *  *
-     *           *   *   *
-     *          *    *    *
-     *         *     *     *
-     *        *      *      *
-     *       *       *       *
-     *      *        *        *
-     *     *         *         *
-     *    *          *          *
-     *   *           *           *
-     *  *            *            *
+     * *            *            *
+     * *           *           *
+     * *          *          *
+     * *         *         *
+     * *        *        *
+     * *       *       *
+     * *      *      *
+     * *     *     *
+     * *    *    *
+     * *   *   *
+     * *  *  *
+     * * * *
+     * ***
+     * *
+     * *
+     * ***
+     * * * *
+     * *  *  *
+     * *   *   *
+     * *    *    *
+     * *     *     *
+     * *      *      *
+     * *       *       *
+     * *        *        *
+     * *         *         *
+     * *          *          *
+     * *           *           *
+     * *            *            *
      * *             *             *
-     *
      */
 
     public static void main(String[] args) {
@@ -49,14 +48,7 @@ public class Snowflake {
         for (int i = 0; i <= rightCornerSix; i++) {
             for (int j = rightCornerSix; j >= 0; j--) {
 
-                if (((rightCornerSix - i == j) && (j > i - 1))
-                        || ((j == (rightCornerSix / 2)) && (j > i - 1))
-                        || (j == rightCornerSix - i)
-                        || (j == rightCornerSix - (rightCornerSix - i))
-                )
-
-                    System.out.print("*");
-
+                if (((rightCornerSix - i == j) && (j > i - 1)) || ((j == (rightCornerSix / 2)) && (j > i - 1)) || (j == rightCornerSix - i) || (j == rightCornerSix - (rightCornerSix - i))) System.out.print("*");
                 else System.out.print(" ");
             }
 
@@ -67,12 +59,10 @@ public class Snowflake {
         System.out.println();
 
         for (int i = 0; i <= rightCornerSix; i++) {
+
             for (int j = rightCornerSix; j >= 0; j--) {
 
-                if ((j == (rightCornerSix / 2) - i) || (j == rightCornerSix / 2) || (j == (rightCornerSix / 2) + i))
-
-                    System.out.print("*");
-
+                if ((j == (rightCornerSix / 2) - i) || (j == rightCornerSix / 2) || (j == (rightCornerSix / 2) + i)) System.out.print("*");
                 else System.out.print(" ");
             }
 

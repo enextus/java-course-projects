@@ -3,6 +3,12 @@ package day031;
 import java.util.Arrays;
 
 public class CocktailSort {
+
+    /**
+     * cocktail sort -> sorting model
+     *
+     */
+
     public static void main(String[] args) {
 
         int[] arr = createIntArray(10);
@@ -22,25 +28,30 @@ public class CocktailSort {
     private static void cocktailSort(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
+
         while (start <= end) {
+
             int count = 0;
+
             for (int i = start; i < end; i++) { //upwards
                 if (arr[i] > arr[i + 1]) {
                     swapTwoElementsInIntArray(arr, i, i + 1);
                     count++;
                 }
             }
+
             end--;
+
             for (int i = end; i > start; i--) { //downwards
                 if (arr[i] < arr[i - 1]) {
                     swapTwoElementsInIntArray(arr, i, i - 1);
                     count++;
                 }
             }
+
             start++;
-            if (count == 0) {
-                break;
-            }
+
+            if (count == 0) break;
         }
     }
 
