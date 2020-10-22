@@ -26,7 +26,6 @@ public class TheTowersOfHanoi {
 
     private static int counter;
     private static final Scanner scanner = new Scanner(System.in);
-    private static final NumberFormat numberFormat = NumberFormat.getNumberInstance();
 
     public static void main(String[] args) {
 
@@ -51,15 +50,16 @@ public class TheTowersOfHanoi {
 
             counter++;
 
-            return numberFormat.format(counter) + ": " + startPeg + " to " + endPeg + "\n";
+            return counter + ": " + startPeg + " to " + endPeg + "\n";
         }
 
         int tempPeg = 6 - startPeg - endPeg;
+
         String firstSteps = nextIteration(disksAmount - 1, startPeg, tempPeg);
 
         counter++;
 
-        String thisStep = numberFormat.format(counter) + ": " + startPeg + " to " + endPeg + "\n";
+        String thisStep = counter + ": " + startPeg + " to " + endPeg + "\n";
         String lastSteps = nextIteration(disksAmount - 1, tempPeg, endPeg);
 
         return firstSteps + thisStep + lastSteps;
