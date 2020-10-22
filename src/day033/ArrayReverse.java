@@ -6,6 +6,16 @@ public class ArrayReverse {
 
     /**
      * array invert
+     *
+     * Test:
+     * [6, 2, 5, 3]
+     * [3, 5, 2, 6]
+     *
+     * [1, 2]
+     * [2, 1]
+     *
+     * [1]
+     * [1]
      */
 
     public static void main(String[] args) {
