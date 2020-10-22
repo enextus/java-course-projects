@@ -52,7 +52,7 @@ public class TheTowersOfHanoi {
             System.out.print("(Maximum number of disks 26!) How many disks do you have? (Input 0 to stop the program): ");
             disksAmount = scanner.nextInt();
 
-            if (disksAmount != 0) {
+            if (disksAmount > 0 && disksAmount < 27) {
                 counter = 0;
 
                 System.out.println(nextIteration(disksAmount, 1, 3));
