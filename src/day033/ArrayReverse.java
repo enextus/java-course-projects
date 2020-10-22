@@ -24,20 +24,17 @@ public class ArrayReverse {
         int[] arr2 = new int[]{1, 2};
         int[] arr3 = new int[]{1};
 
-        System.out.println(Arrays.toString(arr1));
+        System.out.println("Original array: " + Arrays.toString(arr1));
         arrayInvert(arr1);
-        System.out.println(Arrays.toString(arr1));
-        System.out.println();
+        System.out.println("Resulted array: " + Arrays.toString(arr1) + "\n");
 
-        System.out.println(Arrays.toString(arr2));
+        System.out.println("Original array: " + Arrays.toString(arr2));
         arrayInvert(arr2);
-        System.out.println(Arrays.toString(arr2));
-        System.out.println();
+        System.out.println("Resulted array: " + Arrays.toString(arr2) + "\n");
 
-        System.out.println(Arrays.toString(arr3));
+        System.out.println("Original array: " + Arrays.toString(arr3));
         arrayInvert(arr3);
-        System.out.println(Arrays.toString(arr3));
-        System.out.println();
+        System.out.println("Resulted array: " + Arrays.toString(arr3) + "\n");
     }
 
     private static void arrayInvert(int[] arr) {
