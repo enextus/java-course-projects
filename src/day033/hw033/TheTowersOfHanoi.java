@@ -54,7 +54,6 @@ public class TheTowersOfHanoi {
         }
 
         int tempPeg = 6 - startPeg - endPeg;
-
         String firstSteps = nextIteration(disksAmount - 1, startPeg, tempPeg);
 
         counter++;
