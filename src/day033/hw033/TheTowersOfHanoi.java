@@ -18,6 +18,7 @@ public class TheTowersOfHanoi {
      * *
      * With 3 disks, the puzzle can be solved in 7 moves. The minimal number of moves required to solve
      * a Tower of Hanoi puzzle is 2^n – 1, where n is the number of disks.
+     * For example, a stack of 20 disks will require 2^20 – 1 moves;
      */
 
     public static void main(String[] args) {
