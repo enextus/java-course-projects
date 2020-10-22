@@ -19,21 +19,21 @@ public class ArrayReverse {
      */
 
     public static void main(String[] args) {
-        int[] arr1 = new int[]{6, 2, 5, 3};
-        int[] arr2 = new int[]{1, 2};
-        int[] arr3 = new int[]{1};
+        int[] arrOne = new int[]{6, 2, 5, 3};
+        int[] arrTwo = new int[]{1, 2};
+        int[] arrThree = new int[]{1};
 
-        System.out.println("Original array: " + Arrays.toString(arr1));
-        arrayInvert(arr1);
-        System.out.println("Resulted array: " + Arrays.toString(arr1) + "\n");
+        System.out.println("Original array: " + Arrays.toString(arrOne));
+        arrayInvert(arrOne);
+        System.out.println("Resulted array: " + Arrays.toString(arrOne) + "\n");
 
-        System.out.println("Original array: " + Arrays.toString(arr2));
-        arrayInvert(arr2);
-        System.out.println("Resulted array: " + Arrays.toString(arr2) + "\n");
+        System.out.println("Original array: " + Arrays.toString(arrTwo));
+        arrayInvert(arrTwo);
+        System.out.println("Resulted array: " + Arrays.toString(arrTwo) + "\n");
 
-        System.out.println("Original array: " + Arrays.toString(arr3));
-        arrayInvert(arr3);
-        System.out.println("Resulted array: " + Arrays.toString(arr3) + "\n");
+        System.out.println("Original array: " + Arrays.toString(arrThree));
+        arrayInvert(arrThree);
+        System.out.println("Resulted array: " + Arrays.toString(arrThree) + "\n");
     }
 
     private static void arrayInvert(int[] arr) {
