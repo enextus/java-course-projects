@@ -40,7 +40,6 @@ public class ArrayReverse {
         int arrLength = arr.length;
 
         for (int i = 0; i < arrLength / 2; i++) {
-
             int temp = arr[i];
 
             arr[i] = arr[arrLength - 1 - i];
