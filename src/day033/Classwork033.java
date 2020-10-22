@@ -43,7 +43,6 @@ public class Classwork033 {
 
                 miner[i][j] = empty;
             }
-
         }
 
         int count = 0;
