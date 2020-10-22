@@ -31,6 +31,7 @@ public class ТhreeТhousandIssue {
     }
 
     private static boolean searchForAnswer(int n) {
+
         return (n % 58) == ((n % 32) + 14) && (n % 32) == 30;
     }
 }

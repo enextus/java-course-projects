@@ -44,6 +44,7 @@ public class FindMultiplesOfElevenNumbersBetweenTwoNumbers {
     }
 
     private static boolean checkMultiplicityOfElen(int a) {
+
         return a % 11 == 0;
     }
 }

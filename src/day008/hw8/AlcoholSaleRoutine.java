@@ -28,6 +28,5 @@ public class AlcoholSaleRoutine {
         }
 
         return result;
-
     }
 }
