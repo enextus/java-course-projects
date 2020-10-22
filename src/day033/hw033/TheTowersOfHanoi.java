@@ -1,5 +1,8 @@
 package day033.hw033;
 
+import java.util.Scanner;
+import java.text.NumberFormat;
+
 public class TheTowersOfHanoi {
 
     /**
@@ -21,7 +24,44 @@ public class TheTowersOfHanoi {
      * For example, a stack of 20 disks will require 2^20 – 1 moves;
      */
 
+    private static int counter;
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final NumberFormat numberFormat = NumberFormat.getNumberInstance();
+
     public static void main(String[] args) {
 
+        int disksAmount;
+
+        do {
+            System.out.print("How many disks do you have? (0 to stop program): ");
+            disksAmount = scanner.nextInt();
+
+            if (disksAmount != 0) {
+
+                counter = 0;
+                System.out.println("-> " + nextIteration(disksAmount, 1, 3));
+            }
+
+        } while (disksAmount != 0);
+    }
+
+    public static String nextIteration(int disksAmount, int startPeg, int endPeg) {
+
+        if (disksAmount == 1) {
+
+            counter++;
+
+            return numberFormat.format(counter) + ": " + startPeg + " to " + endPeg + "\n";
+        }
+
+        int tempPeg = 6 - startPeg - endPeg;
+        String firstSteps = nextIteration(disksAmount - 1, startPeg, tempPeg);
+
+        counter++;
+
+        String thisStep = numberFormat.format(counter) + ": " + startPeg + " to " + endPeg + "\n";
+        String lastSteps = nextIteration(disksAmount - 1, tempPeg, endPeg);
+
+        return firstSteps + thisStep + lastSteps;
     }
 }
