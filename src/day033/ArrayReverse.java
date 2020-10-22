@@ -19,7 +19,6 @@ public class ArrayReverse {
      */
 
     public static void main(String[] args) {
-
         int[] arr1 = new int[]{6, 2, 5, 3};
         int[] arr2 = new int[]{1, 2};
         int[] arr3 = new int[]{1};
@@ -38,13 +37,14 @@ public class ArrayReverse {
     }
 
     private static void arrayInvert(int[] arr) {
+        int arrLength = arr.length;
 
-        for (int i = 0; i < arr.length / 2; i++) {
+        for (int i = 0; i < arrLength / 2; i++) {
 
             int temp = arr[i];
 
-            arr[i] = arr[arr.length - 1 - i];
-            arr[arr.length - 1 - i] = temp;
+            arr[i] = arr[arrLength - 1 - i];
+            arr[arrLength - 1 - i] = temp;
         }
     }
 }
