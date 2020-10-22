@@ -36,8 +36,8 @@ public class TheTowersOfHanoi {
             disksAmount = scanner.nextInt();
 
             if (disksAmount != 0) {
-
                 counter = 0;
+
                 System.out.println(nextIteration(disksAmount, 1, 3));
             }
 
@@ -47,19 +47,17 @@ public class TheTowersOfHanoi {
     public static String nextIteration(int disksAmount, int startPeg, int endPeg) {
 
         if (disksAmount == 1) {
-
             counter++;
 
-            return (counter + ": " + startPeg + " to " + endPeg + "\n");
+            return (counter + ": " + startPeg + " -> " + endPeg + "\n");
         }
 
         int tempPeg = 6 - startPeg - endPeg;
 
         String firstSteps = nextIteration(disksAmount - 1, startPeg, tempPeg);
-
         counter++;
 
-        String thisStep = (counter + ": " + startPeg + " to " + endPeg + "\n");
+        String thisStep = (counter + ": " + startPeg + " -> " + endPeg + "\n");
         String lastSteps = nextIteration(disksAmount - 1, tempPeg, endPeg);
 
         return (firstSteps + thisStep + lastSteps);
