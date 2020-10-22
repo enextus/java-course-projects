@@ -44,21 +44,21 @@ public class TheTowersOfHanoi {
         } while (disksAmount != 0);
     }
 
-    public static String nextIteration(int disksAmount, int startPeg, int endPeg) {
+    public static String nextIteration(int disksAmount, int startHolder, int endHolder) {
 
         if (disksAmount == 1) {
             counter++;
 
-            return (counter + ": " + startPeg + " -> " + endPeg + "\n");
+            return (counter + ": " + startHolder + " -> " + endHolder + "\n");
         }
 
-        int tempPeg = 6 - startPeg - endPeg;
+        int tempHolder = 6 - startHolder - endHolder;
 
-        String firstSteps = nextIteration(disksAmount - 1, startPeg, tempPeg);
+        String firstSteps = nextIteration(disksAmount - 1, startHolder, tempHolder);
         counter++;
 
-        String thisStep = (counter + ": " + startPeg + " -> " + endPeg + "\n");
-        String lastSteps = nextIteration(disksAmount - 1, tempPeg, endPeg);
+        String thisStep = (counter + ": " + startHolder + " -> " + endHolder + "\n");
+        String lastSteps = nextIteration(disksAmount - 1, tempHolder, endHolder);
 
         return (firstSteps + thisStep + lastSteps);
     }
