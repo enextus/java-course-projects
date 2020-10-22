@@ -51,7 +51,7 @@ public class Classwork033 {
         while (count < bombCount) {
 
             int x = (int) (Math.random() * miner.length);
-            int y = (int) (Math.random()) * miner[x].length;
+            int y = (int) (Math.random() * miner[x].length);
 
             if (!(miner[x][y].equals(bomb))) {
                 miner[x][y] = bomb;
