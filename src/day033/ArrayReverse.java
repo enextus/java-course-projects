@@ -25,19 +25,22 @@ public class ArrayReverse {
         int[] arr3 = new int[]{1};
 
         System.out.println(Arrays.toString(arr1));
-        System.out.println(Arrays.toString(arrayInvert(arr1)));
+        arrayInvert(arr1);
+        System.out.println(Arrays.toString(arr1));
         System.out.println();
 
         System.out.println(Arrays.toString(arr2));
-        System.out.println(Arrays.toString(arrayInvert(arr2)));
+        arrayInvert(arr2);
+        System.out.println(Arrays.toString(arr2));
         System.out.println();
 
         System.out.println(Arrays.toString(arr3));
-        System.out.println(Arrays.toString(arrayInvert(arr3)));
+        arrayInvert(arr3);
+        System.out.println(Arrays.toString(arr3));
         System.out.println();
     }
 
-    private static int[] arrayInvert(int[] arr) {
+    private static void arrayInvert(int[] arr) {
 
         for (int i = 0; i < arr.length / 2; i++) {
 
@@ -46,7 +49,5 @@ public class ArrayReverse {
             arr[i] = arr[arr.length - 1 - i];
             arr[arr.length - 1 - i] = temp;
         }
-
-        return arr;
     }
 }
