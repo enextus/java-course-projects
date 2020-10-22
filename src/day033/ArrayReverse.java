@@ -8,14 +8,14 @@ public class ArrayReverse {
      * array invert
      *
      * Test:
-     * [6, 2, 5, 3]
-     * [3, 5, 2, 6]
+     * Original array: [6, 2, 5, 3]
+     * Resulted array: [3, 5, 2, 6]
      *
-     * [1, 2]
-     * [2, 1]
+     * Original array: [1, 2]
+     * Resulted array: [2, 1]
      *
-     * [1]
-     * [1]
+     * Original array: [1]
+     * Resulted array: [1]
      */
 
     public static void main(String[] args) {
