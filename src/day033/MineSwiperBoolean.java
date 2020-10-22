@@ -1,13 +1,16 @@
 package day033;
 
 public class MineSwiperBoolean {
-    public static void main(String[] args) {
 
+    /**
+     * MineSwiperBoolean
+     */
+
+    public static void main(String[] args) {
 
         boolean[][] field = createBooleanField(10);
 
         printMyField(field);
-
     }
 
     private static void printMyField(boolean[][] field) {
@@ -21,8 +24,6 @@ public class MineSwiperBoolean {
 
             System.out.println();
         }
-
-
     }
 
     private static boolean[][] createBooleanField(int size) {
@@ -32,7 +33,6 @@ public class MineSwiperBoolean {
         boolean[][] output = new boolean[size][size];
 
         int bombCount = size * size * PERCENT / 100;
-
         int count = 0;
 
         while (count < bombCount) {
