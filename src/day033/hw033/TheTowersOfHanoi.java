@@ -1,7 +1,6 @@
 package day033.hw033;
 
 import java.util.Scanner;
-import java.text.NumberFormat;
 
 public class TheTowersOfHanoi {
 
