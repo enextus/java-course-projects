@@ -32,7 +32,7 @@ public class TheTowersOfHanoi {
         int disksAmount;
 
         do {
-            System.out.print("How many disks do you have? (0 to stop program): ");
+            System.out.print("How many disks do you have? (Input zero (0) to stop the program): ");
             disksAmount = scanner.nextInt();
 
             if (disksAmount != 0) {
