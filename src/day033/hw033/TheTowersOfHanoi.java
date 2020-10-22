@@ -31,6 +31,14 @@ public class TheTowersOfHanoi {
      * 5: 2 -> 1
      * 6: 2 -> 3
      * 7: 1 -> 3
+     *
+     * Exception:
+     * How many disks do you have? (Input zero (0) to stop the program): 27
+     * Exception in thread "main" java.lang.OutOfMemoryError: Overflow: String length out of range
+     * 	at java.base/java.lang.StringConcatHelper.checkOverflow(StringConcatHelper.java:53)
+     * 	at java.base/java.lang.StringConcatHelper.mix(StringConcatHelper.java:134)
+     * 	at day033.hw033.TheTowersOfHanoi.nextIteration(TheTowersOfHanoi.java:72)
+     * 	at day033.hw033.TheTowersOfHanoi.main(TheTowersOfHanoi.java:50)
      */
 
     private static int counter;
@@ -41,7 +49,7 @@ public class TheTowersOfHanoi {
         int disksAmount;
 
         do {
-            System.out.print("How many disks do you have? (Input zero (0) to stop the program): ");
+            System.out.print("How many disks do you have? (26 is the maximal possible amount.) (Input zero (0) to stop the program): ");
             disksAmount = scanner.nextInt();
 
             if (disksAmount != 0) {
