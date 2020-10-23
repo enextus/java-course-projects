@@ -2,6 +2,10 @@ package day034;
 
 public class MinesweeperInt {
 
+    /**
+     * Minesweeper - one possible solution
+     */
+
     public static void main(String[] args) {
 
         // 1. Создать поле (двумерный массив)
