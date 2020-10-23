@@ -17,7 +17,7 @@ public class TheTowersOfHanoi {
      * - Only one disk can be moved at a time.
      * - No larger disk may be placed on top of a smaller disk.
      * - Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack
-     * or on an empty rod.
+     *   or on an empty rod.
      * *
      * With 3 disks, the puzzle can be solved in 7 moves. The minimal number of moves required to solve
      * a Tower of Hanoi puzzle is 2^n – 1, where n is the number of disks.
@@ -50,7 +50,7 @@ public class TheTowersOfHanoi {
         int disksAmount;
 
         do {
-            System.out.print("How many disks do you have? (Maximum number of disks 26), (Input 0 to stop the program): ");
+            System.out.print("How many disks do you have? (Maximum number of disks: 26.), (Input 0 to stop the program!): ");
             disksAmount = scanner.nextInt();
 
             if (disksAmount > 0 && disksAmount < 27) {
