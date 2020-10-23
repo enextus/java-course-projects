@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TheTowersOfHanoi {
 
     /**
-     * The Towers of Hanoi is one of the possible particular solutions.
+     * The Towers of Hanoi is one of the possible particular recursive solutions.
      *
      * The Tower of Hanoi (also called the Tower of Brahma or Lucas' Tower[1] and sometimes pluralized as Towers)
      * is a mathematical game or puzzle. It consists of three rods and a number of disks of different sizes,
