@@ -42,7 +42,7 @@ public class TheTowersOfHanoi {
      * 	at day033.hw033.TheTowersOfHanoi.main(TheTowersOfHanoi.java:50)
      */
 
-    private static int counter;
+    private static int iterationCounter;
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -54,7 +54,7 @@ public class TheTowersOfHanoi {
             disksAmount = scanner.nextInt();
 
             if (disksAmount > 0 && disksAmount < 27) {
-                counter = 0;
+                iterationCounter = 0;
 
                 System.out.println(nextIteration(disksAmount, 1, 3));
             }
@@ -65,17 +65,17 @@ public class TheTowersOfHanoi {
     public static String nextIteration(int disksAmount, int startHolder, int endHolder) {
 
         if (disksAmount == 1) {
-            counter++;
+            iterationCounter++;
 
-            return (counter + ": " + startHolder + " -> " + endHolder + "\n");
+            return (iterationCounter + ": " + startHolder + " -> " + endHolder + "\n");
         }
 
         int tempHolder = 6 - startHolder - endHolder;
 
         String firstSteps = nextIteration(disksAmount - 1, startHolder, tempHolder);
-        counter++;
+        iterationCounter++;
 
-        String thisStep = (counter + ": " + startHolder + " -> " + endHolder + "\n");
+        String thisStep = (iterationCounter + ": " + startHolder + " -> " + endHolder + "\n");
         String lastSteps = nextIteration(disksAmount - 1, tempHolder, endHolder);
 
         return (firstSteps + thisStep + lastSteps);
