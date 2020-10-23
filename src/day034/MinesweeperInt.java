@@ -1,7 +1,9 @@
 package day034;
 
-public class MineSwipperInt {
+public class MinesweeperInt {
+
     public static void main(String[] args) {
+
         // 1. Создать поле (двумерный массив)
         // 2. Вывести на экран
         // 3. Указать кол-во бомб
@@ -15,40 +17,36 @@ public class MineSwipperInt {
         // 5.f проверяем нижний правый угол [i+1, j+1]
         // 6. проверка начала и конца массива
         // 7. проверка ниличия бомб в клетках проверки
+
         int[][] field = createField(10);
-        //System.out.println(Arrays.toString(field));
         setNumber(field);
         printArray(field);
-
     }
 
     private static void setNumber(int[][] field) {
         int bomb = -1;
+
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
-                if (field[i][j] == bomb) {
-                    searchHorizontal(field, i, j);
-                }
+                if (field[i][j] == bomb) searchHorizontal(field, i, j);
             }
-
         }
     }
 
-    private static void searchHorizontal(int[][]arr, int x, int y) {
-        if (arr.length - 1 != x) {
-            arr[x][y - 1] = arr[x][y - 1] + 1;
-        }
+    private static void searchHorizontal(int[][] arr, int x, int y) {
+
+        if (arr.length - 1 != x) arr[x][y - 1] = arr[x][y - 1] + 1;
     }
 
     private static void printArray(int[][] field) {
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
+
                 System.out.print(field[i][j] + " ");
             }
+
             System.out.println();
         }
-
-
     }
 
     private static int[][] createField(int size) {
@@ -56,15 +54,16 @@ public class MineSwipperInt {
         int bomb = -1;
         int bombPercent = 10;
         int bombCount = (size * size * bombPercent) / 100;
+
         for (int i = 0; i < bombCount; i++) {
+
             int x = (int) (Math.random() * size);
             int y = (int) (Math.random() * size);
-            if (output[x][y] != bomb) {
-                output[x][y] = bomb;
-            } else {
-                i--;
-            }
+
+            if (output[x][y] != bomb) output[x][y] = bomb;
+            else i--;
         }
+
         return output;
     }
 }
