@@ -76,6 +76,7 @@ public class TheTowersOfHanoi {
         iterationCounter++;
 
         String thisStep = (iterationCounter + ": " + startHolder + " -> " + endHolder + "\n");
+
         String lastSteps = nextIteration(disksAmount - 1, tempHolder, endHolder);
 
         return (firstSteps + thisStep + lastSteps);
