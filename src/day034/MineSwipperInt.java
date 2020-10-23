@@ -27,14 +27,14 @@ public class MineSwipperInt {
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == bomb) {
-                    searchHorizontaly(field, i, j);
+                    searchHorizontal(field, i, j);
                 }
             }
 
         }
     }
 
-    private static void searchHorizontaly(int[][]arr, int x, int y) {
+    private static void searchHorizontal(int[][]arr, int x, int y) {
         if (arr.length - 1 != x) {
             arr[x][y - 1] = arr[x][y - 1] + 1;
         }
