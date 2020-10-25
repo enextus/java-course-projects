@@ -30,6 +30,7 @@ public class MinesweeperInt {
     }
 
     private static void setNumber(int[][] field) {
+
         int bomb = -1;
 
         for (int i = 0; i < field.length; i++) {
@@ -45,6 +46,7 @@ public class MinesweeperInt {
     }
 
     private static int[][] createMinefield(int size) {
+
         int[][] output = new int[size][size];
         int bomb = -1;
         int bombPercent = 10;
@@ -63,8 +65,8 @@ public class MinesweeperInt {
     }
 
     private static void printArray(int[][] field) {
-        for (int i = 0; i < field.length; i++) {
 
+        for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) System.out.printf("%3s", field[i][j]);
 
             System.out.println();
