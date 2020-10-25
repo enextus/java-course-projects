@@ -8,7 +8,7 @@ public class MinesweeperInt {
 
     public static void main(String[] args) {
 
-        // 1. Создать поле (двумерный массив)
+        // 1. Создать поле (двумерный массив) createField()
         // 2. Вывести на экран
         // 3. Указать кол-во бомб
         // 4. Установить бомбы
@@ -22,9 +22,11 @@ public class MinesweeperInt {
         // 6. проверка начала и конца массива
         // 7. проверка ниличия бомб в клетках проверки
 
-        int[][] field = createField(10);
-        setNumber(field);
+        int[][] field = createMinefield(10);
         printArray(field);
+
+        // setNumber(field);
+        // printArray(field);
     }
 
     private static void setNumber(int[][] field) {
@@ -42,18 +44,7 @@ public class MinesweeperInt {
         if (arr.length - 1 != x) arr[x][y - 1] = arr[x][y - 1] + 1;
     }
 
-    private static void printArray(int[][] field) {
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length; j++) {
-
-                System.out.print(field[i][j] + " ");
-            }
-
-            System.out.println();
-        }
-    }
-
-    private static int[][] createField(int size) {
+    private static int[][] createMinefield(int size) {
         int[][] output = new int[size][size];
         int bomb = -1;
         int bombPercent = 10;
@@ -69,5 +60,16 @@ public class MinesweeperInt {
         }
 
         return output;
+    }
+
+    private static void printArray(int[][] field) {
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+
+                System.out.print(field[i][j] + " ");
+            }
+
+            System.out.println();
+        }
     }
 }
