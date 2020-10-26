@@ -48,6 +48,7 @@ public class MinesweeperInt {
     private static int[][] createMinefield(int size) {
 
         int[][] output = new int[size][size];
+
         int bomb = -1;
         int bombPercent = 10;
         int bombCount = (size * size * bombPercent) / 100;
