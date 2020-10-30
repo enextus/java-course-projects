@@ -12,7 +12,7 @@ echo -n Working directory:; pwd;
 ps -ef | tail +2 | wc -l
 # print number of bioset process
 ps -ef | grep bioset | tail +2 | wc -l
-# print chmod of bioset process /etc/passwd
+# print chmod /etc/passwd
 ls -la /etc/passwd | awk {'print $1'}
 
 
