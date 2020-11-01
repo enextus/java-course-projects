@@ -26,7 +26,9 @@ public class MinesweeperInt {
         printArray(field);
 
         setMinesAmounts(field);
-        // printArray(field);
+
+        printArray(field);
+
     }
 
     private static void setMinesAmounts(int[][] field) {
@@ -50,10 +52,22 @@ public class MinesweeperInt {
             System.out.println("y: " + y);
             System.out.println("x: " + x);
 
-            if (x >= 1)  System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
-            System.out.println("    arr[y][x]: " + arr[y][x]);
-            if (x < arr.length - 1) System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
+            if (x >= 1)  {
 
+                if (arr[y][x - 1] != -1 ) arr[y][x - 1] = arr[y][x - 1]  + 1;
+                System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
+            }
+
+            System.out.println("    arr[y][x]: " + arr[y][x]);
+
+            if (x < arr.length - 1) {
+
+                if (arr[y][x + 1] != -1 ) arr[y][x + 1] = arr[y][x + 1] + 1;
+                System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
+            }
+
+
+            System.out.println();
 
 
             // arr[x][y - 1] = arr[x][y - 1] + 1;
