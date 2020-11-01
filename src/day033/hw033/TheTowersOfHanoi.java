@@ -67,7 +67,7 @@ public class TheTowersOfHanoi {
         if (disksAmount == 1) {
             iterationCounter++;
 
-            return (iterationCounter + ": " + sourceHolder + " -> " + targetHolder + "\n");
+            return ("Step " + iterationCounter + ": " + sourceHolder + " move to -> " + targetHolder + "\n");
         }
 
         int tempHolder = 6 - sourceHolder - targetHolder;
@@ -75,7 +75,7 @@ public class TheTowersOfHanoi {
         String firstSteps = nextIteration(disksAmount - 1, sourceHolder, tempHolder);
         iterationCounter++;
 
-        String thisStep = (iterationCounter + ": " + sourceHolder + " -> " + targetHolder + "\n");
+        String thisStep = ("Step " + iterationCounter + ": " + sourceHolder + " move to -> " + targetHolder + "\n");
 
         String lastSteps = nextIteration(disksAmount - 1, tempHolder, targetHolder);
 
