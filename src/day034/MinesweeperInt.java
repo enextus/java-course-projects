@@ -26,7 +26,7 @@ public class MinesweeperInt {
         printArray(field);
 
         setMinesAmounts(field);
-
+        System.out.println();
         printArray(field);
 
     }
@@ -39,7 +39,7 @@ public class MinesweeperInt {
             for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == bomb) {
                     searchHorizontal(field, i, j);
-                    // searchVertical(field, i, j);
+                    searchVertical(field, i, j);
                 }
             }
         }
@@ -47,42 +47,33 @@ public class MinesweeperInt {
 
     private static void searchHorizontal(int[][] arr, int y, int x) {
 
-        // System.out.println("y: " + y);
-        // System.out.println("x: " + x);
-
         if (x >= 1) {
-
             if (arr[y][x - 1] != -1) arr[y][x - 1] = arr[y][x - 1] + 1;
-            // System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
         }
-
-        // System.out.println("    arr[y][x]: " + arr[y][x]);
 
         if (x < arr.length - 1) {
-
             if (arr[y][x + 1] != -1) arr[y][x + 1] = arr[y][x + 1] + 1;
-            // System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
         }
-
-        // System.out.println();
-
-        // arr[x][y - 1] = arr[x][y - 1] + 1;
     }
 
     private static void searchVertical(int[][] arr, int y, int x) {
 
-        if (arr.length - 1 != x) {
-
-            System.out.println("arr.length: " + arr.length);
-
-            System.out.println("x: " + x);
-            System.out.println("y: " + y);
+        if (y >= 1) {
 
             System.out.println("arr[y - 1][x]: " + arr[y - 1][x]);
-            System.out.println("    arr[y][x]: " + arr[y][x]);
-            if (x < arr.length - 1) System.out.println("arr[y + 1][x]: " + arr[y + 1][x]);
 
-            // arr[x][y - 1] = arr[x][y - 1] + 1;
+            if (arr[x][y - 1] != -1) arr[x][y - 1] = arr[x][y - 1] + 1;
+
+        }
+
+        System.out.println("    arr[y][x]: " + arr[y][x]);
+
+        if (y < arr.length - 1) {
+
+            System.out.println("arr[y + 1][x]: " + arr[y + 1][x]);
+
+            if (arr[x][y + 1] != -1) arr[x][y + 1] = arr[x][y + 1] + 1;
+
         }
     }
 
