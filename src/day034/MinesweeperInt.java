@@ -37,6 +37,7 @@ public class MinesweeperInt {
             for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == bomb) {
                     searchHorizontal(field, i, j);
+                    searchVertical(field, i, j);
                 }
             }
         }
@@ -54,12 +55,30 @@ public class MinesweeperInt {
 
 
             System.out.println("arr[x][y - 1]: " + arr[x][y - 1]);
+            System.out.println("arr[x][y]: " + arr[x][y]);
+            System.out.println("arr[x][y + 1]: " + arr[x][y + 1]);
 
             // arr[x][y - 1] = arr[x][y - 1] + 1;
         }
+    }
+
+    private static void searchVertical(int[][] arr, int x, int y) {
+
+        if (arr.length - 1 != y) {
 
 
+            System.out.println("arr.length: " + arr.length);
+            System.out.println("x: " + x);
+            System.out.println("y: " + y);
+            System.out.println("here ");
 
+
+            System.out.println("arr[x - 1][y]: " + arr[x - 1][y]);
+            System.out.println("arr[x][y]: " + arr[x][y]);
+            System.out.println("arr[x + 1][y]: " + arr[x + 1][y]);
+
+            // arr[x][y - 1] = arr[x][y - 1] + 1;
+        }
     }
 
     private static int[][] createMinefield(int size) {
