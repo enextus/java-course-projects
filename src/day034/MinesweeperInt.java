@@ -35,7 +35,9 @@ public class MinesweeperInt {
 
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
-                if (field[i][j] == bomb) searchHorizontal(field, i, j);
+                if (field[i][j] == bomb) {
+                    searchHorizontal(field, i, j);
+                }
             }
         }
     }
