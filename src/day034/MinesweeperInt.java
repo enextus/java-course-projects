@@ -50,7 +50,7 @@ public class MinesweeperInt {
             System.out.println("y: " + y);
             System.out.println("x: " + x);
 
-            System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
+            if (x >= 1)  System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
             System.out.println("    arr[y][x]: " + arr[y][x]);
             if (x < arr.length - 1) System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
 
