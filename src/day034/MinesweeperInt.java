@@ -25,11 +25,11 @@ public class MinesweeperInt {
         int[][] field = createMinefield(10);
         printArray(field);
 
-        // setNumber(field);
+        setMinesAmounts(field);
         // printArray(field);
     }
 
-    private static void setNumber(int[][] field) {
+    private static void setMinesAmounts(int[][] field) {
 
         int bomb = -1;
 
@@ -44,7 +44,22 @@ public class MinesweeperInt {
 
     private static void searchHorizontal(int[][] arr, int x, int y) {
 
-        if (arr.length - 1 != x) arr[x][y - 1] = arr[x][y - 1] + 1;
+        if (arr.length - 1 != x) {
+
+
+            System.out.println("arr.length: " + arr.length);
+            System.out.println("x: " + x);
+            System.out.println("y: " + y);
+            System.out.println("here ");
+
+
+            System.out.println("arr[x][y - 1]: " + arr[x][y - 1]);
+
+            // arr[x][y - 1] = arr[x][y - 1] + 1;
+        }
+
+
+
     }
 
     private static int[][] createMinefield(int size) {
