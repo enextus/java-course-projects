@@ -47,8 +47,6 @@ public class MinesweeperInt {
 
     private static void searchHorizontal(int[][] arr, int y, int x) {
 
-        if (arr.length - 1 != y) {
-
             System.out.println("y: " + y);
             System.out.println("x: " + x);
 
@@ -66,16 +64,10 @@ public class MinesweeperInt {
                 System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
             }
 
-
             System.out.println();
 
-
             // arr[x][y - 1] = arr[x][y - 1] + 1;
-        }
     }
-
-
-
 
 
 
