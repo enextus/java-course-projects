@@ -47,34 +47,20 @@ public class MinesweeperInt {
 
     private static void searchHorizontal(int[][] arr, int y, int x) {
 
-        if (x >= 1) {
+        if (x >= 1)
             if (arr[y][x - 1] != -1) arr[y][x - 1] = arr[y][x - 1] + 1;
-        }
 
-        if (x < arr.length - 1) {
+        if (x < arr.length - 1)
             if (arr[y][x + 1] != -1) arr[y][x + 1] = arr[y][x + 1] + 1;
-        }
     }
 
     private static void searchVertical(int[][] arr, int y, int x) {
 
-        if (y >= 1) {
+        if (y >= 1)
+            if (arr[y - 1][x] != -1) arr[y - 1][x] = arr[y - 1][x] + 1;
 
-            System.out.println("arr[y - 1][x]: " + arr[y - 1][x]);
-
-            if (arr[x][y - 1] != -1) arr[x][y - 1] = arr[x][y - 1] + 1;
-
-        }
-
-        System.out.println("    arr[y][x]: " + arr[y][x]);
-
-        if (y < arr.length - 1) {
-
-            System.out.println("arr[y + 1][x]: " + arr[y + 1][x]);
-
-            if (arr[x][y + 1] != -1) arr[x][y + 1] = arr[x][y + 1] + 1;
-
-        }
+        if (y < arr.length - 1)
+            if (arr[y + 1][x] != -1) arr[y + 1][x] = arr[y + 1][x] + 1;
     }
 
     private static int[][] createMinefield(int size) {
