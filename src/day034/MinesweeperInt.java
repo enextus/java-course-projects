@@ -53,24 +53,21 @@ public class MinesweeperInt {
             if (x >= 1)  {
 
                 if (arr[y][x - 1] != -1 ) arr[y][x - 1] = arr[y][x - 1]  + 1;
-                System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
+                // System.out.println("arr[y][x - 1]: " + arr[y][x - 1]);
             }
 
-            System.out.println("    arr[y][x]: " + arr[y][x]);
+            // System.out.println("    arr[y][x]: " + arr[y][x]);
 
             if (x < arr.length - 1) {
 
                 if (arr[y][x + 1] != -1 ) arr[y][x + 1] = arr[y][x + 1] + 1;
-                System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
+                // System.out.println("arr[y][x + 1]: " + arr[y][x + 1]);
             }
 
-            System.out.println();
+            // System.out.println();
 
             // arr[x][y - 1] = arr[x][y - 1] + 1;
     }
-
-
-
 
     private static void searchVertical(int[][] arr, int y, int x) {
 
