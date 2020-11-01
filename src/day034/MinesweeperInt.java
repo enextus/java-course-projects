@@ -3,24 +3,33 @@ package day034;
 public class MinesweeperInt {
 
     /**
-     * Minesweeper - one possible solution
+     * Minesweeper - one possible part solution
+     *
+     * Test:
+     *   0  0  0  0  0  0  0  0  0  0
+     *   0  0  0  0  0 -1  0 -1  0  0
+     *   0  0  0  0  0  0 -1 -1  0 -1
+     *   0  0  0  0  0  0  0  0  0  0
+     *   0  0  0  0  0 -1  0 -1  0  0
+     *   0  0  0  0  0  0  0  0  0  0
+     *   0  0  0  0  0 -1  0  0  0 -1
+     *   0  0  0  0  0  0  0  0  0  0
+     *   0  0  0  0  0  0  0  0  0 -1
+     *   0  0  0  0  0  0  0  0  0  0
+     *
+     *   0  0  0  0  0  1  0  1  0  0
+     *   0  0  0  0  1 -1  3 -1  1  1
+     *   0  0  0  0  0  2 -1 -1  2 -1
+     *   0  0  0  0  0  1  1  2  0  1
+     *   0  0  0  0  1 -1  2 -1  1  0
+     *   0  0  0  0  0  2  0  1  0  1
+     *   0  0  0  0  1 -1  1  0  1 -1
+     *   0  0  0  0  0  1  0  0  0  2
+     *   0  0  0  0  0  0  0  0  1 -1
+     *   0  0  0  0  0  0  0  0  0  1
      */
 
     public static void main(String[] args) {
-
-        // 1. Создать поле (двумерный массив) createField()
-        // 2. Вывести на экран
-        // 3. Указать кол-во бомб
-        // 4. Установить бомбы
-        // 5. Расписать поле по установке: 0-0, 1-1, 2-2 ... 8-8
-        // 5.а проверяем каждую клетку по горизонтали, в обе стороны [i, j+1] и [i, j-1]
-        // 5.b проверка по вертикали [i-1, j], [i+1, j]
-        // 5.c проверяем верхний левый угол [i-1, j-1]
-        // 5.d проверяем верхний правый угол [i-1, j+1]
-        // 5.e проверяем нижний левый угол [i+1, j-1]
-        // 5.f проверяем нижний правый угол [i+1, j+1]
-        // 6. проверка начала и конца массива
-        // 7. проверка ниличия бомб в клетках проверки
 
         int[][] field = createMinefield(10);
         printArray(field);
@@ -28,7 +37,6 @@ public class MinesweeperInt {
         setMinesAmounts(field);
         System.out.println();
         printArray(field);
-
     }
 
     private static void setMinesAmounts(int[][] field) {
@@ -38,14 +46,14 @@ public class MinesweeperInt {
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
                 if (field[i][j] == bomb) {
-                    searchHorizontal(field, i, j);
-                    searchVertical(field, i, j);
+                    checkHorizontal(field, i, j);
+                    checkVertical(field, i, j);
                 }
             }
         }
     }
 
-    private static void searchHorizontal(int[][] arr, int y, int x) {
+    private static void checkHorizontal(int[][] arr, int y, int x) {
 
         if (x >= 1)
             if (arr[y][x - 1] != -1) arr[y][x - 1] = arr[y][x - 1] + 1;
@@ -54,7 +62,7 @@ public class MinesweeperInt {
             if (arr[y][x + 1] != -1) arr[y][x + 1] = arr[y][x + 1] + 1;
     }
 
-    private static void searchVertical(int[][] arr, int y, int x) {
+    private static void checkVertical(int[][] arr, int y, int x) {
 
         if (y >= 1)
             if (arr[y - 1][x] != -1) arr[y - 1][x] = arr[y - 1][x] + 1;
