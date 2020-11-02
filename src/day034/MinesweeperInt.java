@@ -48,6 +48,7 @@ public class MinesweeperInt {
                 if (field[i][j] == bomb) {
                     checkHorizontal(field, i, j);
                     checkVertical(field, i, j);
+                    checkLeftUpperRightDownCorner(field, i, j);
                 }
             }
         }
@@ -73,10 +74,10 @@ public class MinesweeperInt {
 
     private static void checkLeftUpperRightDownCorner(int[][] arr, int y, int x) {
 
-        if (y >= 1)
+        if (y >= 1 && x >= 1)
             if (arr[y - 1][x - 1] != -1) arr[y - 1][x - 1] = arr[y - 1][x - 1] + 1;
 
-        if (y < arr.length - 1)
+        if (y < arr.length - 1 && x < arr.length - 1)
             if (arr[y + 1][x + 1] != -1) arr[y + 1][x + 1] = arr[y + 1][x + 1] + 1;
     }
 
