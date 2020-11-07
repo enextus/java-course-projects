@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..3}
+for i in {1..100}
 do
 
 	sleep .8s;
@@ -24,7 +24,7 @@ do
 		cat /etc/os-release | head -1 | awk -F = '$1=="NAME" {print$2}' > os_information.txt
 
 		# make some .txt file
-		touch "E${i}_file.txt"
+		touch "${i}.txt"
 
 
 done

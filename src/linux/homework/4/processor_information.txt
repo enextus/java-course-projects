@@ -5,7 +5,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 2185.527
+cpu MHz		: 2941.739
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -32,7 +32,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 2396.711
+cpu MHz		: 2171.380
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -59,7 +59,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 1977.703
+cpu MHz		: 2758.195
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -86,7 +86,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 2432.652
+cpu MHz		: 2377.312
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -113,7 +113,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 1858.302
+cpu MHz		: 1880.231
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -140,7 +140,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 2017.125
+cpu MHz		: 2663.257
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -167,7 +167,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 1889.742
+cpu MHz		: 1953.281
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
@@ -194,7 +194,7 @@ model		: 58
 model name	: Intel(R) Core(TM) i7-3920XM CPU @ 2.90GHz
 stepping	: 9
 microcode	: 0x21
-cpu MHz		: 3412.694
+cpu MHz		: 1963.267
 cache size	: 8192 KB
 physical id	: 0
 siblings	: 8
