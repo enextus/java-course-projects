@@ -23,5 +23,8 @@ do
 		# write the os information in to a file (only os name)
 		cat /etc/os-release | head -1 | awk -F = '$1=="NAME" {print$2}' > os_information.txt
 
+		# make some .txt file
+		touch "E${i}_file.txt"
+
 
 done
