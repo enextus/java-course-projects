@@ -16,6 +16,12 @@ do
 		
 		# write the processor information in to a file
 		cat /proc/cpuinfo > processor_information.txt
+		
+		# write the os information in to a file
+		cat /etc/os-release | head -1
+
+		# write the os information in to a file (only os name)
+		cat /etc/os-release | head -1 | awk -F = '$1=="NAME" {print$2}' > os_information.txt
 
 
 done
