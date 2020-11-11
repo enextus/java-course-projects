@@ -1,0 +1,9 @@
+drwxr-xr-x   3 eduard eduard  4096 сне 15  2019 srv
+dr-xr-xr-x  13 eduard eduard     0 кас 16 23:41 sys
+-rw-r--r--   1 eduard eduard     0 кас 16 23:43 tail
+drwxrwxrwt  19 eduard eduard 16384 кас 16 23:40 tmp
+drwxr-xr-x  14 eduard eduard  4096 ліп 26  2019 usr
+drwxr-xr-x  14 eduard eduard  4096 лют 28  2020 var
+lrwxrwxrwx   1 eduard eduard    31 кас 14 06:46 vmlinuz -> boot/vmlinuz-4.15.0-121-generic
+lrwxrwxrwx   1 eduard eduard    31 кас 14 06:46 vmlinuz.old -> boot/vmlinuz-4.15.0-118-generic
+
