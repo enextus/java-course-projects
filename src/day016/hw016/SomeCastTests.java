@@ -1,27 +1,25 @@
 package day016.hw016;
 
+/**
+ * String alphabetCyrillic = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
+ * String alphabetLatin = "abcdefghijklmnopqrstuvwxyz";
+ * *
+ * char ch = 'a';
+ * int ascii = ch;
+ * *
+ * // You can also cast char to int
+ * int castAscii = (int) ch;
+ * *
+ * System.out.println("The ASCII value of " + ch + " is: " + ascii);
+ * System.out.println("The ASCII value of " + ch + " is: " + castAscii);
+ * *
+ * int chr = 'Z';
+ * *
+ * System.out.println("The ASCII value of Z is :" + chr);
+ * System.out.println("The ASCII value of Z is :" + (chr + 3));
+ * System.out.println("The ASCII Symbol of code " + (chr + 3) + " is " + (char) (chr) + (char) (chr + 3));
+ */
 public class SomeCastTests {
-
-    /**
-     * String alphabetCyrillic = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
-     * String alphabetLatin = "abcdefghijklmnopqrstuvwxyz";
-     * *
-     * char ch = 'a';
-     * int ascii = ch;
-     * *
-     * // You can also cast char to int
-     * int castAscii = (int) ch;
-     * *
-     * System.out.println("The ASCII value of " + ch + " is: " + ascii);
-     * System.out.println("The ASCII value of " + ch + " is: " + castAscii);
-     * *
-     * int chr = 'Z';
-     * *
-     * System.out.println("The ASCII value of Z is :" + chr);
-     * System.out.println("The ASCII value of Z is :" + (chr + 3));
-     * System.out.println("The ASCII Symbol of code " + (chr + 3) + " is " + (char) (chr) + (char) (chr + 3));
-     */
-
     public static void main(String[] args) {
 
         char ch = 'a';
