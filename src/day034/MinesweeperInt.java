@@ -113,9 +113,9 @@ public class MinesweeperInt {
 
     private static void printArray(int[][] field) {
 
-        for (int i = 0; i < field.length; i++) {
+        for (int[] ints : field) {
 
-            for (int j = 0; j < field[i].length; j++) System.out.printf("%3s", field[i][j]);
+            for (int j = 0; j < ints.length; j++) System.out.printf("%3s", ints[j]);
             System.out.println();
         }
     }
