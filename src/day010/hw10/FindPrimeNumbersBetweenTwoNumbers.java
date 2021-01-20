@@ -5,7 +5,7 @@ public class FindPrimeNumbersBetweenTwoNumbers {
     /**
      * A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers.
      * A natural number greater than 1 that is not prime is called a composite number.
-     *
+     * <p>
      * Write a program that finds prime numbers between a and b.
      */
 
@@ -33,17 +33,21 @@ public class FindPrimeNumbersBetweenTwoNumbers {
 
         for (int i = a; i <= b; i++) {
 
-            if (checkPrime(i)) System.out.print(i + "; ");
-            if (i == b && i < 2 && !checkPrime(i)) System.out.print("None");
+            if (checkPrime(i))
+                System.out.print(i + "; ");
 
+            if (i == b && i < 2 && !checkPrime(i))
+                System.out.print("None");
         }
     }
 
     private static boolean checkPrime(int n) {
-        if (n <= 1) return false; // corner return with false
+        if (n <= 1)
+            return false; // corner return with false
 
         for (int i = 2; i < n; i++) { // check the following range 2 to n-1
-            if (n % i == 0) return false;
+            if (n % i == 0)
+                return false;
         }
 
         return true;
